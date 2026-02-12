@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(201, 255, 255);
+    height: 100vh;
+    
+}
+
+.box{
+    width: 200px;
+    flex: 1;
+    height: 200px;
+    background-color: rgb(230, 242, 238);
+}
+
+.container :nth-child(odd){
+    background-color: red;
+}
