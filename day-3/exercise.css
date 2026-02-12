@@ -1,3 +1,20 @@
-.body{
-    background-color: white;
+
+body{
+    background-color:rgb(216, 216, 216);
+}
+
+.id_cont{
+    margin-top: 6%;
+    width: 22%;
+    text-align: center;
+    border: 2px solid rgb(255, 247, 247);
+    background: #efefef;
+    border-radius: 5%; 
+}
+
+.img{
+    width: 100%;
+}
+.header{
+    background: #c8c7c7;
 }
