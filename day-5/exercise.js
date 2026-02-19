@@ -1,17 +1,46 @@
-var inc_btn = document.querySelector(js-increment-btn);
-var dec_btn = document.querySelector(js-decrement-btn);
-var counter_text_element = document.querySelector(js-counter-text);
+const textElement = document.querySelector(".js-counter-text");
+const buttonInc = document.querySelector(".js-increment-btn");
+const buttonDec = document.querySelector(".js-decrement-btn");
 
-let count = 0;
+let counter = 0;
 
-inc_btn.addEventListener('click', function()
-{
-    count++;
+buttonInc.addEventListener("click", function () {
+  counter++;
+  textElement.textContent = counter;
+});
 
-})
+buttonDec.addEventListener("click", function () {
+  counter--;
+  textElement.textContent = counter;
+});
 
-dec_btn.addEventListener('click', function()
-{
-    count--;
-    return count;
-})
+// Dog Age Calculator
+
+const ageInput = document.querySelector(".js-age-input");
+const buttonCalculate = document.querySelector(".js-calculate-btn");
+const textResult = document.querySelector(".js-result");
+
+buttonCalculate.addEventListener("click", function () {
+  const humanAge = Number(ageInput.value);
+
+  if (!humanAge || humanAge <= 0) {
+    textResult.textContent = "Please enter a valid age.";
+    ageInput.style.border = "2px solid red";
+    textResult.style.color = "red";
+    return;
+  }
+  ageInput.style.border = "1px solid #ccc";
+  textResult.style.color = "black";
+  let dogAge;
+
+  if (humanAge <= 15) {
+    dogAge = humanAge / 15;
+  } else if (humanAge <= 24) {
+    dogAge = 1 + (humanAge - 15) / 9;
+  } else {
+    dogAge = 2 + (humanAge - 24) / 5;
+  }
+
+  dogAge = dogAge.toFixed(1);
+  textResult.textContent = `your dog age is ${dogAge}`;
+});
