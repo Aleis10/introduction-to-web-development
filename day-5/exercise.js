@@ -10,8 +10,11 @@ buttonInc.addEventListener("click", function () {
 });
 
 buttonDec.addEventListener("click", function () {
-  counter--;
-  textElement.textContent = counter;
+    if(counter > 0){
+        counter--;
+        textElement.textContent = counter;
+    }
+        
 });
 
 // Dog Age Calculator
